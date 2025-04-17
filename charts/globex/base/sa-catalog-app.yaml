@@ -1,0 +1,10 @@
+---
+# Source: globex/templates/sa-catalog-app.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app.kubernetes.io/instance: globex-app
+    app.kubernetes.io/name: catalog-database
+    app.kubernetes.io/part-of: globex-app
+  name: catalog-app

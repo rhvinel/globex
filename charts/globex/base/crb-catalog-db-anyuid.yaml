@@ -1,0 +1,18 @@
+---
+# Source: globex/templates/crb-catalog-db-anyuid.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  labels:
+    app.kubernetes.io/instance: globex-app
+    app.kubernetes.io/name: catalog-database
+    app.kubernetes.io/part-of: globex-app
+  name: 'system:openshift:scc:anyuid-catalog'
+subjects:
+  - kind: ServiceAccount
+    name: catalog-app
+    namespace: globex
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:openshift:scc:anyuid'

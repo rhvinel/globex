@@ -1,0 +1,11 @@
+---
+# Source: globex/templates/sa-globex-app-recommendation-engine.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app.kubernetes.io/instance: globex-app
+    app.kubernetes.io/name: recommendation-engine
+    app.kubernetes.io/part-of: globex-app
+    app.kubernetes.io/version: 1.0.0
+  name: globex-app-recommendation-engine

@@ -1,0 +1,15 @@
+---
+# Source: globex/templates/pvc-catalog-database.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: globex
+    template: postgresql-persistent-template
+  name: catalog-database
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
